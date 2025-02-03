@@ -1155,58 +1155,35 @@
                 font-size: 14px;
             }
         }
-                /* Seção de download */
-        .download-book {
-            background: #f9f9f9;
-            padding: 30px 20px;
-            text-align: center;
-            border: 2px solid #9F43BE;
-            border-radius: 12px;
-            max-width: 600px;
-            margin: 40px auto;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-        }
+            .download-section {
+                background-color: #9f43be11; /* Fundo violeta suave */
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+            .download-btn {
+                background-color: #9F43BE;
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.3s ease;
+                font-weight: bold;
+            }
 
-        .download-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+            .download-btn i {
+                font-size: 18px;
+            }
 
-        .pdf-icon {
-            font-size: 50px;
-            color: #9F43BE;
-            margin-bottom: 10px;
-        }
-
-        /* Texto */
-        .text-content h2 {
-            font-size: 22px;
-            color: #9F43BE;
-            margin-bottom: 5px;
-        }
-
-        .text-content p {
-            font-size: 16px;
-            color: #333;
-        }
-
-        /* Botão de download */
-        .download-btn {
-            margin-top: 15px;
-            padding: 10px 18px;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            color: white;
-            background: #9F43BE;
-            border-radius: 8px;
-            transition: background 0.3s ease;
-        }
-
-        .download-btn:hover {
-            background: #822f9f;
-        }
+            .download-btn:hover {
+                background-color: #7D3598;
+            }
         /* Conteúdo da Conclusão */
         .conclusao {
             display: flex;
@@ -1931,16 +1908,11 @@
             principais das secundárias por uma sequência numérica. Ex. 1; 1.1; 1.2; 2; 2.1 etc).
         </p>
     </section>
-    <section class="download-book">
-        <div class="download-content">
-            <i class="fas fa-file-pdf pdf-icon"></i>
-            <div class="text-content">
-                <h2>📖 Baixe o Livro da Unidade</h2>
-                <p>Aprofunde seus conhecimentos com este material exclusivo.</p>
-            </div>
-            <a href="livros/unidade1.pdf" class="download-btn" download>📥 Baixar PDF</a>
-        </div>
-    </section>
+    <div class="download-section">
+        <a href="https://drive.google.com/uc?export=download&id=1fpVWf_JRcsmUoCTA-nQBlFDuPP0K1iCV" class="download-btn">
+            Baixar PDF <i class="fas fa-download"></i> <!-- Ícone de download -->
+        </a>
+    </div>
     <!-- Seção Conclusão -->
     <section id="conclusao" class="conclusao">
         <!-- Conteúdo -->
