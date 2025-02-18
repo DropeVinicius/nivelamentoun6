@@ -405,7 +405,7 @@
             text-align: justify;
             line-height: 1.6;
             color: #333;
-            margin-bottom: 10px;
+            margin: 20px auto;
             width: 90%; /* Ajuste de largura */
             max-width: 800px; /* Limite máximo */
         }
@@ -426,22 +426,22 @@
         @media (max-width: 768px) {
             .secao1 h1 {
                 font-size: 1.5rem;
-                text-align: center;
+                text-align: left;
             }
 
             .secao1 p {
-                font-size: 0.6rem;
+                font-size: 0.9rem;
                 line-height: 1.4;
             }
 
         }
         @media (max-width: 480px) {
             .secao1 h1 {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
 
             .secao1 p {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             } 
         }
                 /* Container responsivo para iframe */
@@ -510,13 +510,16 @@
             margin-bottom: 15px;
         }
 
-        /* Fonte da imagem */
+       /* Fonte da imagem */
         .fonte-quadrov {
             font-size: 16px;
             font-family: 'Roboto', sans-serif;
-            color: #555; /* Cinza escuro */
+            color: #555;
             margin-bottom: 10px;
             text-align: left;
+            word-wrap: break-word; /* Quebra palavras longas */
+            overflow-wrap: break-word; /* Garante que textos extensos se ajustem */
+            width: 100%; /* O texto ocupa toda a largura disponível */
         }
 
         /* Descrição da imagem */
@@ -527,7 +530,7 @@
             text-align: justify;
             line-height: 1.6;
         }
-
+        
         /* Estilo responsivo para o quadro */
         @media (max-width: 768px) {
             .quadrov {
@@ -570,7 +573,7 @@
             width: 90%; /* Largura ajustada à estrutura */
             max-width: 800px; /* Limite máximo */
             height: auto; /* Altura do retângulo */
-            margin: 100px auto; /* Espaçamento da seção acima e centralização */
+            margin: 20px auto;
             position: relative; /* Define o contexto de empilhamento */
         }
                 /* Responsividade - Ajuste para telas menores */
@@ -670,7 +673,7 @@
         }
         .learn-more-paragraphq {
             font-family: 'Roboto', sans-serif;
-            font-size: 18px;
+            font-size: 17px;
             line-height: 1.4;
             color: #000;
             width: 90%;
@@ -698,81 +701,95 @@
         }
 
         /* Container principal */
-        .container-box {
-            background-color: #fff; /* Fundo branco */
-            border: 2px solid #9F43BE; /* Borda violeta */
-            border-radius: 10px; /* Cantos arredondados */
-            padding: 20px; /* Espaçamento interno */
-            width: 90%;
-            max-width: 800px; /* Limite de largura */
-            margin: 20px auto; /* Centralizar */
-        }
+.container-box {
+    background-color: #fff; /* Fundo branco */
+    border: 2px solid #9F43BE; /* Borda violeta */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 20px; /* Espaçamento interno */
+    width: 90%;
+    max-width: 800px; /* Limite de largura */
+    margin: 20px auto; /* Centralizar */
+}
+.container-box p {
+    margin: 0; /* Remove a margem herdada */
+    padding: 5px;
+    width: 100%; /* Faz o texto ocupar todo o espaço disponível */
+}
 
-        /* Layout da imagem + texto */
-        .content {
-            display: flex;
-            align-items: center; /* Alinhamento vertical */
-            justify-content: space-between;
-            gap: 20px; /* Espaço entre os elementos */
-        }
+/* Layout da imagem + texto */
+.content {
+    display: flex;
+    align-items: stretch; /* Faz com que imagem e texto ocupem o mesmo espaço vertical */
+    justify-content: space-between;
+    gap: 20px; /* Espaço entre os elementos */
+}
 
-        /* Imagem */
-        .content img {
-            width: 400px; /* Tamanho pequeno */
-            height: auto;
-            border-radius: 5px; /* Pequeno arredondamento */
-        }
+/* Imagem */
+.content img {
+    width: 350px; /* Ajuste do tamanho da imagem */
+    height: auto;
+    border-radius: 5px; /* Pequeno arredondamento */
+    object-fit: cover; /* Garante que a imagem preencha seu espaço sem distorcer */
+}
 
-        /* Texto */
-        .textimg {
-            font-family: 'Roboto', sans-serif !important;
-            font-size: 16px !important;
-            color: #333;
-            line-height: 1.5 !important;
-            flex: 1 !important; /* O texto ocupa o espaço restante */
-            text-align: justify;
-        }
+/* Texto */
+.textimg {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 16px !important;
+    color: #333;
+    line-height: 1.5 !important;
+    flex: 1 !important; /* O texto ocupa o espaço restante */
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Faz com que o texto ocupe toda a altura do container */
+    height: 100%; /* Faz com que o bloco de texto tenha a mesma altura da imagem */
+}
 
-        /* Descrição abaixo da imagem */
-        .description {
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
-            color: #666;
-            margin-top: 15px;
-            text-align: center; /* Descrição centralizada */
-        }
+/* Descrição abaixo da imagem */
+.description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    padding-left: 5px;
+    text-align: justify; /* Melhor alinhamento */
+}
 
-        /* 🔹 Responsividade 🔹 */
-        @media (max-width: 768px) {
-            .content {
-                flex-direction: column !important; /* Empilha imagem e texto */
-                text-align: center !important;
-            }
+/* 🔹 Responsividade 🔹 */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column !important; /* Empilha imagem e texto */
+        align-items: center;
+        text-align: center !important;
+    }
 
-            .container-box {
-                width: 85%; /* Reduz a largura em telas médias */
-                max-width: 400px; /* Define um limite para não ficar muito grande */
-            }
-            
-            .content img {
-                width: 90% !important; /* Imagem mais responsiva */
-                max-width: 300px !important; /* Limite de tamanho */
-                margin-bottom: 10px !important;  /* Espaço entre imagem e texto */
-            }
-            
-            .textimg {
-                font-size: 14px !important; /* Texto reduzido */
-                text-align: justify !important; /* Melhor leitura */
-            }
-        }
+    .container-box {
+        width: 85%; /* Reduz a largura em telas médias */
+        max-width: 400px; /* Define um limite para não ficar muito grande */
+    }
 
-        @media (max-width: 480px) {
-            .container-box {
-                width: 80%; /* Ajuste para telas pequenas */
-                max-width: 400px; /* Reduz ainda mais em celulares menores */
-                padding: 15px; /* Ajusta o espaçamento interno */
-            }
-        }
+    .content img {
+        width: 90% !important; /* Imagem mais responsiva */
+        max-width: 300px !important; /* Limite de tamanho */
+        margin-bottom: 10px !important; /* Espaço entre imagem e texto */
+    }
+
+    .textimg {
+        font-size: 14px !important; /* Texto reduzido */
+        text-align: justify !important; /* Melhor leitura */
+        display: block; /* Garante que o texto fique bem distribuído */
+    }
+}
+
+@media (max-width: 480px) {
+    .container-box {
+        width: 80%; /* Ajuste para telas pequenas */
+        max-width: 400px; /* Reduz ainda mais em celulares menores */
+        padding: 15px; /* Ajusta o espaçamento interno */
+    }
+}
+
         /* Retângulo de fundo */
         .background-section {
             background-color: #015A42; /* Cor de fundo verde */
@@ -781,7 +798,7 @@
             width: 90%; /* Largura ajustada à estrutura */
             max-width: 800px; /* Limite máximo */
             height: auto; /* Altura do retângulo */
-            margin: 100px auto; /* Espaçamento da seção acima e centralização */
+            margin: 20px auto; /* Espaçamento da seção acima e centralização */
             position: relative; /* Define o contexto de empilhamento */
         }
                 /* Responsividade - Ajuste para telas menores */
@@ -1017,7 +1034,7 @@
             text-align: justify;
             line-height: 1.6;
             color: #333;
-            margin-bottom: 10px;
+            margin: 20px auto;
             width: 90%; /* Ajuste de largura */
             max-width: 800px; /* Limite máximo */
         }
@@ -1026,7 +1043,7 @@
         @media (max-width: 768px) {
             .secao2 h1 {
                 font-size: 1.5rem;
-                text-align: center;
+                text-align: left;
             }
 
             .secao2 p {
@@ -1037,11 +1054,11 @@
         }
         @media (max-width: 480px) {
             .secao2 h1 {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
 
             .secao2 p {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             } 
         }
         /* Container dos novos accordions */
